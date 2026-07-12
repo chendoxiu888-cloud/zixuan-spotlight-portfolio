@@ -125,20 +125,13 @@ export function App() {
       <div className="design-stage">
         <HeroSpotlight />
 
-        <picture className="design-picture">
-          <source
-            type="image/avif"
-            srcSet={`${asset("design-1440.avif")} 1440w, ${asset("design-2880.avif")} 2880w`}
-            sizes="(max-width: 1440px) 100vw, 1440px"
-          />
-          <img
-            className="design-image"
-            src={asset("design-original.png")}
-            alt="陈梓轩个人网站设计稿"
-            decoding="async"
-            fetchPriority="high"
-          />
-        </picture>
+        <img
+          className="design-image"
+          src={asset("design-2x.png")}
+          srcSet={`${asset("design-original.png")} 1x, ${asset("design-2x.png")} 2x, ${asset("design-hd.png")} 4x`}
+          alt="陈梓轩个人网站设计稿"
+          decoding="async"
+        />
 
         {navItems.map((item) => (
           <span key={item.id} id={item.id} className="section-anchor" style={{ top: `${(item.top / 4350) * 100}%` }} />
