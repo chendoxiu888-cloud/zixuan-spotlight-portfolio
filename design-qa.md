@@ -47,6 +47,7 @@
 2. Post-fix evidence in `qa-header.png`, `qa-article.png`, and `qa-comparison.png` shows a single header and aligned article layout.
 3. User follow-up identified low-density text, delayed motion, oversized article hit boxes, and contact outlines. Replaced the source with 2×/4× responsive exports, converted article titles and contact buttons to crisp HTML, shortened the motion curve, and removed rectangular/white outlines. Post-fix evidence is in `qa-article-hd.png` and `qa-contact-hd.png`.
 4. The homepage-only background was replaced with the two-layer interaction from `chendoxiu888-cloud/lithos-spotlight-reveal`. The original homepage title, intro copy, Chatbot button positions, fixed navigation, and every section below the homepage were preserved. Mouse movement updates the soft trailing spotlight mask; evidence is in `qa-hero-spotlight.png`.
+5. Added the supplied AIPM résumé as a direct PDF download, restored the four article view counts, and removed bitmap/HTML duplication in the article and contact regions using precisely scoped black masks plus single crisp HTML layers. Evidence is in `qa-article-views.png` and `qa-contact-dedup.png`.
 
 **Follow-up polish**
 

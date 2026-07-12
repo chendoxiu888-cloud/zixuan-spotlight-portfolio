@@ -13,10 +13,10 @@ const navItems = [
 ];
 
 const articleLinks = [
-  { href: "https://ai-news-repo.vercel.app/01.html", title: "当发布一个模型，需要政府先点头：Fable 5 封禁、GPT-5.6 门控，与产品人必须看懂的新规则" },
-  { href: "https://ai-news-repo.vercel.app/02.html", title: "一万亿美元的赛跑：Anthropic 抢跑、OpenAI 踩刹车，SpaceX 用一次破发给所有人上了课" },
-  { href: "https://ai-news-repo.vercel.app/09.html", title: "Gemini 3.5 Pro 又跳票：Google 的麻烦，不只是晚了几周" },
-  { href: "https://ai-news-repo.vercel.app/04.html", title: "一个诺奖得主、一个 Transformer 之父，同一周离职：AI 人才战争里，钱已经拦不住人了" },
+  { href: "https://ai-news-repo.vercel.app/01.html", title: "当发布一个模型，需要政府先点头：Fable 5 封禁、GPT-5.6 门控，与产品人必须看懂的新规则", views: "2.5w浏览" },
+  { href: "https://ai-news-repo.vercel.app/02.html", title: "一万亿美元的赛跑：Anthropic 抢跑、OpenAI 踩刹车，SpaceX 用一次破发给所有人上了课", views: "2.3w浏览" },
+  { href: "https://ai-news-repo.vercel.app/09.html", title: "Gemini 3.5 Pro 又跳票：Google 的麻烦，不只是晚了几周", views: "1.9w浏览" },
+  { href: "https://ai-news-repo.vercel.app/04.html", title: "一个诺奖得主、一个 Transformer 之父，同一周离职：AI 人才战争里，钱已经拦不住人了", views: "1.7w浏览" },
 ];
 
 function scaleTop(designY) {
@@ -112,9 +112,14 @@ export function App() {
           ))}
         </nav>
 
-        <button className="resume-pill" type="button" aria-label="PDF 简历">
+        <a
+          className="resume-pill"
+          href={asset("zixuan-chen-aipm-resume.pdf")}
+          download="陈紫璇AIPM简历.pdf"
+          aria-label="下载 PDF 简历"
+        >
           PDF 简历
-        </button>
+        </a>
       </header>
 
       <div className="design-stage">
@@ -142,7 +147,8 @@ export function App() {
               rel="noreferrer"
               aria-label={article.title}
             >
-              <span>{article.title}</span>
+              <span className="article-link__title">{article.title}</span>
+              <span className="article-link__views">{article.views}</span>
             </a>
           ))}
         </div>
